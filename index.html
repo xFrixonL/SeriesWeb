@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SeriesWeb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+    <div class="login-box">
+        <form id="loginForm">
+            <h1>Iniciar Sesión</h1>
+            <input type="text" id="user" placeholder="Nombre de usuario" required>
+            <input type="password" id="pass" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const user = document.getElementById('user').value;
+            const pass = document.getElementById('pass').value;
+            if (user && pass) {
+                window.location.href = 'app.html';
+            }
+        });
+    </script>
+</body>
+
+</html>
